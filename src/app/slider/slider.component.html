@@ -1,0 +1,18 @@
+<div class="slider-container">
+  <div class="left" (click)="previous()">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+  <div class="content">
+    <ng-container *ngIf="isImageSlider">
+      <img src="{{getContent()}}">
+    </ng-container>
+    <ng-container *ngIf="!isImageSlider">
+      <div>
+        {{getContent()}}
+      </div>
+    </ng-container>
+  </div>
+  <div class="right" (click)="next()">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+</div>

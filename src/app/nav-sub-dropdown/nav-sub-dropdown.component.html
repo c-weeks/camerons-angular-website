@@ -1,0 +1,11 @@
+<div class="dropdown">
+  <div class="header">
+    <label>{{headerName}}</label>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="expanded-section">
+    <ng-container *ngFor="let subPage of subPages">
+      <app-nav-link linkUrl="{{subPage.link}}" linkText="{{subPage.text}}"></app-nav-link>
+    </ng-container>
+  </div>
+</div>
