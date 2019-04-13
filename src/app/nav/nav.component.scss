@@ -1,0 +1,13 @@
+@import '../../styles/colors.scss';
+@import './nav-variables.scss';
+
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  border-bottom: $nav-border-size solid $black;
+  position: relative;
+  padding: 10px 0;
+}

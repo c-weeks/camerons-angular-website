@@ -1,0 +1,10 @@
+@import '../styles/colors.scss';
+$theme-font: verdana, sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: $theme-font;
+}

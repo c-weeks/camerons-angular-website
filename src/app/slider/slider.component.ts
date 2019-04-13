@@ -1,16 +1,32 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Content } from '@angular/compiler/src/render3/r3_ast';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
+
+export enum KEY_CODE {
+  RIGHT_ARROW = 39,
+  LEFT_ARROW = 37
+}
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
   @Input() content: string[] = [];
   @Input() isImageSlider = true;
 
   private currentIndex = 0;
+
+  @HostListener('document:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    console.log(event);
+    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+      this.next();
+    }
+
+    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+      this.previous();
+    }
+  }
 
   constructor() { }
 
