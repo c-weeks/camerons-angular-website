@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./baking.component.scss']
 })
 export class BakingComponent implements OnInit {
-  public photoLinks = [];
+  public bakingLinks = [];
+
   constructor() { }
 
   ngOnInit() {
-    // TODO: get all images with prefix flower and put them in links
-    for (let i = 1; i <= 13; i++) {
-      this.photoLinks.push(`/assets/imgs/baking/baking${i}.jpg`);
+    for (let i = 1; i <= 20; i++) {
+      this.bakingLinks.push(`/assets/imgs/baking/baking${i}.jpg`);
     }
   }
 

@@ -12,6 +12,7 @@
 
     label {
         padding-right: 5px;
+        cursor: pointer;
     }
 
     &:hover {
@@ -22,14 +23,19 @@
 }
 
 .expanded-section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    height: auto;
     position: absolute;
     margin-top: $nav-padding + $nav-border-size;
 
+    .subpages-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     app-nav-link {
         padding: 10px;
+        width: 100%;
         background-color: $accent-grey;
 
         &:hover {

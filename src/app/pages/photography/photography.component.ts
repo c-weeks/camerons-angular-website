@@ -10,8 +10,7 @@ export class PhotographyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // TODO: get all images with prefix flower and put them in links
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 1; i <= 38; i++) {
       this.photoLinks.push(`/assets/imgs/photography/flower${i}.jpg`);
     }
   }

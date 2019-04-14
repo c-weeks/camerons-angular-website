@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +13,8 @@ import { NavSubDropdownComponent } from './nav-sub-dropdown/nav-sub-dropdown.com
 import { PhotographyComponent } from './pages/photography/photography.component';
 import { BakingComponent } from './pages/baking/baking.component';
 import { SliderComponent } from './slider/slider.component';
+import { ClickOutsideDirective } from './layout/click-outside/click-outside.directive';
+import { ChocolateComponent } from './pages/chocolate/chocolate.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +26,16 @@ import { SliderComponent } from './slider/slider.component';
     ResumeComponent,
     PhotographyComponent,
     BakingComponent,
+    ChocolateComponent,
     NavSubDropdownComponent,
     PhotographyComponent,
-    BakingComponent,
-    SliderComponent
+    SliderComponent,
+    ClickOutsideDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

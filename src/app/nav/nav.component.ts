@@ -9,8 +9,9 @@ import { SubPage } from '../models/subPage';
 export class NavComponent implements OnInit {
 
   public hobbiesPages: SubPage[] = [
-    new SubPage('/photography', 'Photography'),
-    new SubPage('/baking', 'Baking')
+    new SubPage('/hobbies/photography', 'Photography'),
+    new SubPage('/hobbies/baking', 'Baking'),
+    new SubPage('/hobbies/chocolate', 'Chocolate'),
   ];
 
   constructor() { }
