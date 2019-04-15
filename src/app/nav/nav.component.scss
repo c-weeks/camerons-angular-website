@@ -7,7 +7,7 @@
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
-  border-bottom: $nav-border-size solid $black;
+  border-bottom: $nav-border-size double $theme-primary-color;
   position: relative;
   padding: 10px 0;
 }

@@ -1,10 +1,10 @@
-<div class="slider-container" *ngIf="content && content.length > 0">
+<div class="slider-container" *ngIf="content && content.length > 0" [ngStyle]="{ 'max-width': maxWidth}">
   <div class="left arrow" (click)="previous()">
     <i class="fas fa-chevron-left"></i>
   </div>
   <div class="content">
     <ng-container *ngIf="isImageSlider">
-      <img src="{{getContent()}}">
+      <div class="image" [ngStyle]="{ 'background-image': 'url(' + getContent() + ')'}"></div>
     </ng-container>
     <ng-container *ngIf="!isImageSlider">
       <div>

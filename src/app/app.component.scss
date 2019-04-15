@@ -1,10 +1,7 @@
 @import '../styles/colors.scss';
-$theme-font: verdana, sans-serif;
+$theme-font: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 
 * {
     box-sizing: border-box;
-}
-
-body {
-    font: $theme-font;
+    font-family: $theme-font;
 }

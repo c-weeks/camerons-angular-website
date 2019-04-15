@@ -11,6 +11,7 @@
     width: 100%;
     height: 100%;
     justify-content: space-between;
+    margin: auto;
 }
 
 .arrow {
@@ -20,8 +21,13 @@
 .content {
     align-self: center;
     height: 100%;
+    width: 100%;
 
-    img {
+    .image {
         height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
     }
 }

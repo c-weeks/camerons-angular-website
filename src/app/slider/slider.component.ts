@@ -13,6 +13,7 @@ export enum KEY_CODE {
 export class SliderComponent implements OnInit {
   @Input() content: string[] = [];
   @Input() isImageSlider = true;
+  @Input() maxWidth: string;
 
   private currentIndex = 0;
 
@@ -39,15 +40,15 @@ export class SliderComponent implements OnInit {
     }
   }
 
-  previous() {
-    if (this.currentIndex + 1 > this.content.length) {
+  next() {
+    if (this.currentIndex + 1 >= this.content.length) {
       this.currentIndex = 0;
     } else {
       this.currentIndex++;
     }
   }
 
-  next() {
+  previous() {
     if (this.currentIndex - 1 < 0) {
       this.currentIndex = this.content.length - 1;
     } else {
