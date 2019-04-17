@@ -7,6 +7,7 @@ import { BakingComponent } from './pages/baking/baking.component';
 import { ChocolateComponent } from './pages/chocolate/chocolate.component';
 
 const routes: Routes = [
+  { path: '', component: AboutComponent },
   { path: 'about', component: AboutComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'hobbies/photography', component: PhotographyComponent },

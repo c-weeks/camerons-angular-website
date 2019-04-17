@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 export enum KEY_CODE {
-  RIGHT_ARROW = 39,
-  LEFT_ARROW = 37
+  RIGHT_ARROW = '39',
+  LEFT_ARROW = '37',
 }
 
 @Component({
@@ -15,16 +15,15 @@ export class SliderComponent implements OnInit {
   @Input() isImageSlider = true;
   @Input() maxWidth: string;
 
-  private currentIndex = 0;
+  currentIndex = 0;
 
-  @HostListener('document:keyup', ['$event'])
+  @HostListener('keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    console.log(event);
-    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+    if (event.key === KEY_CODE.RIGHT_ARROW) {
       this.next();
     }
 
-    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+    if (event.key === KEY_CODE.LEFT_ARROW) {
       this.previous();
     }
   }

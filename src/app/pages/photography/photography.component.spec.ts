@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PhotographyComponent } from './photography.component';
+import { SliderComponent } from 'src/app/slider/slider.component';
 
 describe('PhotographyComponent', () => {
   let component: PhotographyComponent;
@@ -8,7 +9,10 @@ describe('PhotographyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PhotographyComponent ]
+      declarations: [
+        PhotographyComponent,
+        SliderComponent,
+      ]
     })
     .compileComponents();
   }));
